@@ -78,25 +78,25 @@ const Header = () => {
         <div
           className={`md:flex ${isOpen ? 'block' : 'hidden'} absolute md:static top-0 right-0 mt-16 md:mt-0 bg-gray-800 md:bg-transparent w-full md:w-auto`}
         >
-          <div className="flex flex-col md:flex-row md:items-center md:ml-auto z-50 relative">
-            <Link to="/" className="mr-4 my-2 md:my-0">Home</Link>
-            <Link to="/aboutus" className="mr-4 my-2 md:my-0">About Us</Link>
-            <Link to="/contactus" className="mr-4 my-2 md:my-0">Contact Us</Link>
+          <div className="flex flex-col md:flex-row md:items-center md:ml-auto z-50 relative p-4 md:p-0">
+            <Link to="/" className="mr-4 my-2 md:my-0 text-white lg:text-black">Home</Link>
+            <Link to="/aboutus" className="mr-4 my-2 md:my-0 text-white lg:text-black">About Us</Link>
+            <Link to="/contactus" className="mr-4 my-2 md:my-0 text-white lg:text-black">Contact Us</Link>
             <div
               className="relative group"
               onMouseEnter={showDropdown}
               onMouseLeave={hideDropdown}
             >
-              <button className="mr-4 my-2 md:my-0 inline-flex items-center">
+              <button className="mr-4 my-2 md:my-0 inline-flex items-center text-white lg:text-black">
                 Services
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               {isDropdownVisible && (
-                <div className="absolute right-0 bg-white text-black mt-1 rounded shadow-lg w-fit">
-                  <Link to="/ceramiccoating" className="whitespace-nowrap block px-4 py-2 hover:bg-gray-200">Ceramic Coating</Link>
-                  <Link to="/paintprotection" className="whitespace-nowrap block px-4 py-2 hover:bg-gray-200">Paint Protection</Link>
+                <div className="absolute right-0 bg-gray-800 md:bg-white text-black md:mt-1 rounded shadow-lg w-full md:w-fit">
+                  <Link to="/ceramiccoating" className="whitespace-nowrap block px-4 py-2 hover:bg-gray-200 text-white lg:text-black hover:text-black">Ceramic Coating</Link>
+                  <Link to="/paintprotection" className="whitespace-nowrap block px-4 py-2 hover:bg-gray-200 text-white lg:text-black hover:text-black">Paint Protection</Link>
                   {/* <Link to="/wraps" className="whitespace-nowrap block px-4 py-2 hover:bg-gray-200">Wraps</Link> */}
                 </div>
               )}

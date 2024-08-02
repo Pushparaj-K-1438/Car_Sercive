@@ -6,10 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'banner-jeep': "url('/path/to/banner-jeep.jpg')",
-        'banner-merc': "url('/path/to/banner-merc.jpg')"
-      },
       colors: {
         primary: {
           light: '#58aefb',

@@ -9,11 +9,11 @@ const BenefitCard = ({ icon, title }) => {
 
 const Benefits = () => {
   const benefits = [
-    { icon: 'path/to/super-high-gloss-finish.png', title: 'Super High Gloss Finish' },
-    { icon: 'path/to/fade-resistant.png', title: 'Fade Resistant' },
-    { icon: 'path/to/chemical-resistant.png', title: 'Chemical Resistant' },
-    { icon: 'path/to/super-hydrophobic.png', title: 'Super Hydrophobic' },
-    { icon: 'path/to/scratch-resistant.png', title: 'Scratch Resistant (9H Hardness)' }
+    { icon: 'src/assets/sparkles.svg', title: 'Super High Gloss Finish' },
+    { icon: 'src/assets/sun.svg', title: 'Fade Resistant' },
+    { icon: 'src/assets/chemical.svg', title: 'Chemical Resistant' },
+    { icon: 'src/assets/droplet.svg', title: 'Super Hydrophobic' },
+    { icon: 'src/assets/shield.svg', title: 'Scratch Resistant (9H Hardness)' }
   ];
 
   return (

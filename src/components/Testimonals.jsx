@@ -1,186 +1,94 @@
-import KeenSlider from 'keen-slider';
-import 'keen-slider/keen-slider.min.css';
-import { useEffect } from 'react';
+import 'swiper/swiper-bundle.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
 
-const Testimonals = () => {
-  useEffect(() => {
-    const keenSlider = new KeenSlider(
-      '#keen-slider',
-      {
-        loop: true,
-        slides: {
-          origin: 'center',
-          perView: 1.25,
-          spacing: 16,
-        },
-        breakpoints: {
-          '(min-width: 1024px)': {
-            slides: {
-              origin: 'auto',
-              perView: 1.5,
-              spacing: 32,
-            },
-          },
-        },
-      },
-      []
-    );
+const testimonials = [
+  {
+    text: "Pagedone has made it possible for me to stay on top of my portfolio and make informed decisions quickly and easily.",
+    name: "Jane D",
+    role: "CEO",
+    avatar: "https://pagedone.io/asset/uploads/1696229969.png",
+  },
+  {
+    text: "Thanks to pagedone, I feel more informed and confident about my investment decisions than ever before.",
+    name: "Harsh P.",
+    role: "Product Designer",
+    avatar: "https://pagedone.io/asset/uploads/1696229994.png",
+  },
+  {
+    text: "The customer service team at pagedone went above and beyond to help me resolve a billing issue.",
+    name: "Alex K.",
+    role: "Design Lead",
+    avatar: "https://pagedone.io/asset/uploads/1696230027.png",
+  },
+  {
+    text: "Pagedone has made it possible for me to stay on top of my portfolio and make informed decisions quickly and easily.",
+    name: "Jane D",
+    role: "CEO",
+    avatar: "https://pagedone.io/asset/uploads/1696229969.png",
+  },
+  {
+    text: "Thanks to pagedone, I feel more informed and confident about my investment decisions than ever before.",
+    name: "Harsh P.",
+    role: "Product Designer",
+    avatar: "https://pagedone.io/asset/uploads/1696229994.png",
+  },
+];
 
-    const keenSliderPrevious = document.getElementById('keen-slider-previous');
-    const keenSliderNext = document.getElementById('keen-slider-next');
-
-    const keenSliderPreviousDesktop = document.getElementById('keen-slider-previous-desktop');
-    const keenSliderNextDesktop = document.getElementById('keen-slider-next-desktop');
-
-    keenSliderPrevious.addEventListener('click', () => keenSlider.prev());
-    keenSliderNext.addEventListener('click', () => keenSlider.next());
-
-    keenSliderPreviousDesktop.addEventListener('click', () => keenSlider.prev());
-    keenSliderNextDesktop.addEventListener('click', () => keenSlider.next());
-
-    return () => {
-      keenSlider.destroy();
-    };
-  }, []);
-
+const Testimonials = () => {
   return (
-    <section className="bg-transparent">
-      <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
-          <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Don't just take our word for it...
-            </h2>
-            <p className="mt-4 text-gray-700">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat
-              harum porro optio fugit a culpa sunt id!
-            </p>
-            <div className="hidden lg:mt-8 lg:flex lg:gap-4">
-              <button
-                aria-label="Previous slide"
-                id="keen-slider-previous-desktop"
-                className="rounded-full border border-secondary p-3 text-secondary transition hover:bg-secondary hover:text-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-5 rtl:rotate-180"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 19.5L8.25 12l7.5-7.5"
-                  />
-                </svg>
-              </button>
-              <button
-                aria-label="Next slide"
-                id="keen-slider-next-desktop"
-                className="rounded-full border border-secondary p-3 text-secondary transition hover:bg-secondary hover:text-white"
-              >
-                <svg
-                  className="size-5 rtl:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9 5l7 7-7 7"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div className="-mx-6 lg:col-span-2 lg:mx-0">
-            <div id="keen-slider" className="keen-slider">
-              {Array(3).fill(0).map((_, index) => (
-                <div className="keen-slider__slide rounded-md" key={index}>
-                  <blockquote className="group flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12 hover:bg-black">
-                    <div>
-                      <div className="flex gap-0.5 text-secondary">
-                        {Array(5).fill(0).map((_, starIndex) => (
-                          <svg
-                            key={starIndex}
-                            className="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-                        ))}
-                      </div>
-                      <div className="mt-4">
-                        <p className="mt-4 leading-relaxed text-gray-700 group-hover:text-white">
-                          No, Rose, they are not breathing. And they have no arms or legs … Where are
-                          they? You know what? If we come across somebody with no arms or legs, do we
-                          bother resuscitating them? I mean, what quality of life do we have there?
-                        </p>
-                      </div>
-                    </div>
-                    <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6 group-hover:text-white">
-                      &mdash; Michael Scott
-                    </footer>
-                  </blockquote>
+    <section className="py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-16 text-center">
+          <span className="text-sm text-secondary font-medium block mb-2">TESTIMONIAL</span>
+          <h2 className="text-4xl font-bold text-gray-900">What our happy user says!</h2>
+        </div>
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          slidesPerView={1}
+          spaceBetween={32}
+          loop={true}
+          centeredSlides={true}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          breakpoints={{
+            640: { slidesPerView: 1, spaceBetween: 32 },
+            768: { slidesPerView: 2, spaceBetween: 32 },
+            1024: { slidesPerView: 3, spaceBetween: 32 },
+          }}
+        >
+          {testimonials.map((testimonial, index) => (
+            <SwiperSlide key={index}>
+              <div className="group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500 hover:border-secondary hover:shadow-sm">
+                <div className="">
+                  <div className="flex items-center mb-7 gap-2 text-secondary transition-all duration-500">
+                    <svg className="w-5 h-5" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span className="text-base font-semibold text-secondary">4.9</span>
+                  </div>
+                  <p className="text-base text-gray-600 leading-6 transition-all duration-500 pb-8 group-hover:text-gray-800">
+                    {testimonial.text}
+                  </p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="mt-8 flex gap-4 lg:hidden">
-          <button
-            aria-label="Previous slide"
-            id="keen-slider-previous"
-            className="rounded-full border border-secondary p-3 text-secondary transition hover:bg-accent-dark hover:text-white"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="size-5 rtl:rotate-180"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </button>
-          <button
-            aria-label="Next slide"
-            id="keen-slider-next"
-            className="rounded-full border border-secondary p-3 text-secondary transition hover:bg-accent-dark hover:text-white"
-          >
-            <svg
-              className="size-5 rtl:rotate-180"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 5l7 7-7 7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-              />
-            </svg>
-          </button>
-        </div>
+                <div className="flex items-center gap-5 border-t border-solid border-gray-200 pt-5">
+                  <img className="rounded-full h-10 w-10" src={testimonial.avatar} alt="avatar" />
+                  <div className="block">
+                    <h5 className="text-gray-900 font-medium transition-all duration-500 mb-1">{testimonial.name}</h5>
+                    <span className="text-sm leading-4 text-gray-500">{testimonial.role}</span>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+          <div className="swiper-pagination"></div>
+        </Swiper>
       </div>
     </section>
   );
 };
 
-export default Testimonals;
+export default Testimonials;

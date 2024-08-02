@@ -41,7 +41,11 @@ const Footer = () => {
               </li>
               <li className="flex items-start mb-2">
                 <i className="flaticon-right-arrow mr-2"></i>
-                <Link to="/services" className="mr-4 my-2 md:my-0">Services</Link>
+                <Link to="/ceramiccoating" className="mr-4 my-2 md:my-0">Ceramic Coating</Link>
+              </li>
+              <li className="flex items-start mb-2">
+                <i className="flaticon-right-arrow mr-2"></i>
+                <Link to="/paintprotection" className="mr-4 my-2 md:my-0">Paint Protection</Link>
               </li>
             </ul>
           </div>

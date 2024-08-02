@@ -11,14 +11,14 @@ const services = [
     icon: 'flaticon-cogwheels',
     title: 'Ceramic Coating',
     description: 'A must and should coating for your car! The nano-ceramic coating is engineered to shield your car from scratches, rust, debris, soot and all kinds of everyday harsh threats.',
-    link: '/services/ceramiccoating',
+    link: '/ceramiccoating',
     delay: 200
   },
   {
     icon: 'flaticon-box',
     title: 'Paint Protection',
     description: 'A virtually invisible polymer layer applied by professionals that helps to primarily shield the paint from UV exposure, rock chips, mineral deposits, acid rain, scratches and more.',
-    link: '/services/paintprotection',
+    link: '/paintprotection',
     delay: 400
   },
   {
@@ -36,7 +36,7 @@ const Home = () => {
       <section className="text-white text-center">
         <CarouselMain />
       </section>
-      <section className="services bg-gray-100 p-8 bg-transparent relative bottom-32">
+      <section className="services bg-gray-100 p-8 bg-transparent relative md:bottom-32 sm:bottom-22">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
             {services.map((service, index) => (
