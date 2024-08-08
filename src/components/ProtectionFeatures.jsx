@@ -34,7 +34,7 @@ const ProtectionFeatures = () => {
         <div className="flex flex-wrap justify-center">
           {features.map((feature, index) => (
             <div key={index} className="w-full sm:w-1/2 lg:w-1/6 p-4">
-              <div className="single-featured-services-box text-center p-6 bg-white shadow-lg rounded-lg">
+              <div className="single-featured-services-box text-center p-6 bg-white shadow-lg rounded-lg transform hover:-translate-y-1 duration-300 hover:shadow-xl cursor-pointer">
                 <div className="services-area-content">
                   <div className="icon mb-4">
                     <img src={feature.icon} alt={feature.title} className="mx-auto" />

@@ -9,22 +9,22 @@ import Testimonals from './Testimonals';
 const services = [
   {
     icon: 'flaticon-cogwheels',
-    title: 'Ceramic Coating',
-    description: 'A must and should coating for your car! The nano-ceramic coating is engineered to shield your car from scratches, rust, debris, soot and all kinds of everyday harsh threats.',
+    title: 'Ceramic Coating System',
+    description: 'Think of the moment you first saw your car gleaming in the sunlight, its pristine surface reflecting your excitement. Our Ceramic Coating System brings back that moment every day. This nano-ceramic shield protects your car from scratches, rust, and debris, preserving its beauty. Every drive becomes a journey in a car that looks as stunning as it did on day one, with a sparkle and gloss that turn heads wherever you go',
     link: '/ceramiccoating',
     delay: 200
   },
   {
     icon: 'flaticon-box',
-    title: 'Paint Protection',
-    description: 'A virtually invisible polymer layer applied by professionals that helps to primarily shield the paint from UV exposure, rock chips, mineral deposits, acid rain, scratches and more.',
+    title: 'Paint Protection Film',
+    description: 'Imagine driving without the constant worry of chips, scratches, or fading paint. Our Paint Protection Film gives you that peace of mind. This invisible layer, expertly applied, shields your car from the harsh realities of the road. UV rays, rock chips, and acid rain become powerless against your car’s flawless finish. And with its self-healing properties, those pesky swirl marks disappear as if by magic, keeping your car’s exterior smooth and glossy.',
     link: '/paintprotection',
     delay: 400
   },
   {
     icon: 'flaticon-discount',
-    title: 'Wraps',
-    description: 'Make your car look amazing by adding a pinch of personalization with Esperto car wraps. They come in carbon fiber, matte and gloss that can be customizable with high durability.',
+    title: 'Car Wraps',
+    description: 'Your car is an extension of your personality, and it should tell your story. With our custom car wraps, it does just that. Choose from carbon fiber, matte, or gloss finishes, and watch your car transform into a unique masterpiece that mirrors your style. Our wraps are designed to enhance every curve and contour, providing a durable, stunning finish. Best of all, when it’s time for a new look, the original paint remains untouched, as vibrant as ever.',
     link: '/services/wraps',
     delay: 600
   }

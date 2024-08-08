@@ -1,16 +1,19 @@
 import Copyright from "./Copyright";
 import { Link } from 'react-router-dom';
-
+import JustWash from '../assets/justWash.png';
 
 const Footer = () => {
   return (
     <>
-    <footer className="bg-gradient-to-l from-gradientFrom to-gradientTo font-semibold py-12">
+    <footer className="bg-black font-semibold py-12 text-white">
       <div className="container mx-auto">
         <div className="flex flex-wrap">
           {/* Logo and Description */}
           <div className="w-full md:w-1/4 px-4 mb-8 md:mb-0">
-            <h2 className="text-3xl font-semibold">Car Service</h2>
+            <h2 className="text-3xl font-semibold flex gap-2 items-center justify-start">
+              <img src={JustWash} alt="JustWash Logo" className="h-14" />
+              JustWash
+              </h2>
             <p>We’re dedicated to giving you the very best of ceramic protection Services in Detailing industry. Your number one source for all types of Auto detailing services.</p>
           </div>
           {/* Address */}

@@ -27,7 +27,7 @@ const BenefitsSection = () => {
       <div className="container mx-auto px-4">
         <div className="works-title text-center mb-12">
           <h2 className="text-3xl font-bold text-secondary">What’s in it for you?</h2>
-          <p>Actually, we can give you more than 100 reasons, but you get our point!</p>
+          <p>Imagine the joy of driving a car that not only performs flawlessly but also radiates beauty. Our services offer you more than just protection; they provide an experience. You’ll feel the difference every time you take the wheel, knowing your car is cared for by the best in the business. It’s about pride, confidence, and the pure pleasure of owning a car that’s always at its best.</p>
         </div>
         <div className="flex flex-wrap">
           {benefits.map((benefit, index) => (

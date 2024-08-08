@@ -4,27 +4,27 @@ const WoekSectionTwo = () => {
     const items = [
         {
           icon: 'flaticon-gear',
-          title: 'Undeniably genuine',
+          title: 'Undeniably Genuine',
           subtitle: 'Premium products',
-          description: 'What goes into your car is nothing but the best! We guarantee you high-quality consumables. We use top quality Drexler Ceramic coating solutions and Hexis Paint Protection Film from France.',
+          description: 'We use only the highest quality products to ensure exceptional results.',
         },
         {
           icon: 'flaticon-team',
           title: 'Unmatched Service',
           subtitle: 'Warranty',
-          description: 'Like never before, we give you 1, 3, and 5 years of unconditional Car Service Warranty. The maintenance cost varies depending upon the usage. We make sure you get more than what Authorised Service Centres have to offer!',
+          description: 'Our comprehensive warranty guarantees your satisfaction and peace of mind.',
         },
         {
           icon: 'flaticon-capital',
           title: 'Unbeatable',
           subtitle: 'Services',
-          description: 'No last minute surprises! With premium quality products and services, your car is going to get only the best. This is an Esperto promise!',
+          description: 'Our range of services is designed to deliver unparalleled quality and effectiveness.',
         },
         {
           icon: 'flaticon-support-1',
           title: 'Unbelievable Car',
           subtitle: 'Service experience',
-          description: 'Free pick-up and drop-in services, for your ease and convenience. Now is the time to sit back, relax!',
+          description: 'From the moment you arrive, we strive to provide an experience that leaves you delighted and your car looking incredible. Transform your car with us. Visit our studio today and rediscover the joy of driving a vehicle that looks and feels brand new!',
         },
       ];
   return (
@@ -34,7 +34,8 @@ const WoekSectionTwo = () => {
           <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
             <div className="choose-title mb-8">
               <span className="text-secondary">Our works</span>
-              <h2 className="text-4xl font-bold">How we works</h2>
+              <h2 className="text-4xl font-bold">About Our Services</h2>
+              <p>We offer a range of detailing services that are second to none. Whether you’re looking for ultimate protection, a stunning new look, or a combination of both, we have the perfect solution for you. Our services are designed to exceed your expectations, ensuring your car looks and performs at its peak.</p>
             </div>
             <div className="flex flex-wrap">
               {items.map((item, index) => (

@@ -26,6 +26,15 @@ export default {
         gradientTo: '#f8dd1e',
         customGray: 'rgb(250 250 250)',
       },
+      keyframes: {
+        bounceOnce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+      animation: {
+        bounceOnce: 'bounceOnce 0.5s ease-in-out',
+      },
       backgroundColor: theme => ({
         'custom-gray': 'rgba(237, 246, 245)',
       }),

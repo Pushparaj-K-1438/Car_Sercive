@@ -7,7 +7,7 @@ const Copyright = () => {
           <div className="w-full md:w-1/2 text-center md:text-left px-4 mb-4 md:mb-0">
             <ul className="list-none">
               <li>
-                Designed &amp; Developed by <a href="#" className="text-secondary">Car Service</a>
+                Designed &amp; Developed by <a href="#" className="text-secondary">zero Group</a>
               </li>
             </ul>
           </div>

@@ -7,7 +7,7 @@ const Services = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <Link to="ceramiccoating" className="bg-white p-4 shadow rounded">Ceramic Coating</Link>
         <Link to="paintprotection" className="bg-white p-4 shadow rounded">Paint Protection</Link>
-        <Link to="wraps" className="bg-white p-4 shadow rounded">Wraps</Link>
+        <Link to="wraps" className="bg-white p-4 shadow rounded">Car Wraps</Link>
       </div>
       <Outlet />
     </div>

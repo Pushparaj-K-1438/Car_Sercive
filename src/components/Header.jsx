@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import JustWash from '../assets/justWash.png';
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +27,7 @@ const Header = () => {
   const hideDropdown = () => {
     const timeout = setTimeout(() => {
       setIsDropdownVisible(false);
-    }, 300); // Adjust delay time as needed
+    }, 300);
     setHideTimeout(timeout);
   };
 
@@ -41,10 +43,13 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-gradient-to-l from-gradientFrom to-gradientTo p-4 text-black font-semibold sticky top-0 w-full z-50 transition-all duration-300 ${isSticky ? 'shadow-lg' : 'shadow-none'}`}
+      className={`bg-black p-4 text-white font-semibold sticky top-0 w-full z-50 transition-all duration-300 ${isSticky ? 'shadow-lg' : 'shadow-none'}`}
     >
       <nav className="container mx-auto flex justify-between items-center">
-        <h1 className="text-xl">Car Services</h1>
+        <h1 className="text-xl flex gap-2 justify-start items-center">
+          <img src={JustWash} alt="JustWash Logo" className="h-11" />
+          JustWash
+          </h1>
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -78,16 +83,16 @@ const Header = () => {
         <div
           className={`md:flex ${isOpen ? 'block' : 'hidden'} absolute md:static top-0 right-0 mt-16 md:mt-0 bg-gray-800 md:bg-transparent w-full md:w-auto`}
         >
-          <div className="flex flex-col md:flex-row md:items-center md:ml-auto z-50 relative p-4 md:p-0">
-            <Link to="/" className="mr-4 my-2 md:my-0 text-white lg:text-black">Home</Link>
-            <Link to="/aboutus" className="mr-4 my-2 md:my-0 text-white lg:text-black">About Us</Link>
-            <Link to="/contactus" className="mr-4 my-2 md:my-0 text-white lg:text-black">Contact Us</Link>
+          <div className="flex flex-col md:flex-row md:items-center md:ml-auto z-50 relative p-4 md:p-0 text-white">
+            <Link to="/" className="mr-4 my-2 md:my-0 text-white">Home</Link>
+            <Link to="/aboutus" className="mr-4 my-2 md:my-0 text-white">About Us</Link>
+            <Link to="/contactus" className="mr-4 my-2 md:my-0 text-white">Contact Us</Link>
             <div
               className="relative group"
               onMouseEnter={showDropdown}
               onMouseLeave={hideDropdown}
             >
-              <button className="mr-4 my-2 md:my-0 inline-flex items-center text-white lg:text-black">
+              <button className="mr-4 my-2 md:my-0 inline-flex items-center text-white">
                 Services
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -95,9 +100,9 @@ const Header = () => {
               </button>
               {isDropdownVisible && (
                 <div className="absolute right-0 bg-gray-800 md:bg-white text-black md:mt-1 rounded shadow-lg w-full md:w-fit">
-                  <Link to="/ceramiccoating" className="whitespace-nowrap block px-4 py-2 hover:bg-gray-200 text-white lg:text-black hover:text-black">Ceramic Coating</Link>
-                  <Link to="/paintprotection" className="whitespace-nowrap block px-4 py-2 hover:bg-gray-200 text-white lg:text-black hover:text-black">Paint Protection</Link>
-                  {/* <Link to="/wraps" className="whitespace-nowrap block px-4 py-2 hover:bg-gray-200">Wraps</Link> */}
+                  <Link to="/ceramiccoating" className="whitespace-nowrap block px-4 py-2 hover:bg-gray-200 text-black hover:text-black">Ceramic Coating</Link>
+                  <Link to="/paintprotection" className="whitespace-nowrap block px-4 py-2 hover:bg-gray-200 text-black hover:text-black">Paint Protection</Link>
+                  <Link to="/carWraps" className="whitespace-nowrap block px-4 py-2 hover:bg-gray-200 text-black hover:text-black">Car Wraps</Link>
                 </div>
               )}
             </div>

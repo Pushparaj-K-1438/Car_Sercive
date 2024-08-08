@@ -6,6 +6,9 @@ import CeramicCoating from './components/services/CeramicCoating';
 import PaintProtection from './components/services/PaintProtection';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import 'animate.css';
+import './index.css';
+import CarWraps from './components/services/CarWraps';
 
 function App() {
   return (
@@ -17,6 +20,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
           <Route path="ceramiccoating" element={<CeramicCoating />} />
           <Route path="paintprotection" element={<PaintProtection />} />
+          <Route path="carWraps" element={<CarWraps />} />
       </Routes>
       <Footer />
     </div>
