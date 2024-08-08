@@ -1,3 +1,8 @@
+import sparkles from '../../assets/sparkles.svg'
+import sun from '../../assets/sun.svg'
+import chemical from '../../assets/chemical.svg'
+import droplet from '../../assets/droplet.svg'
+import shield from '../../assets/shield.svg'
 const BenefitCard = ({ icon, title }) => {
   return (
     <div className="flex flex-col items-center">
@@ -9,11 +14,12 @@ const BenefitCard = ({ icon, title }) => {
 
 const Benefits = () => {
   const benefits = [
-    { icon: 'src/assets/sparkles.svg', title: 'Super High Gloss Finish' },
-    { icon: 'src/assets/sun.svg', title: 'Fade Resistant' },
-    { icon: 'src/assets/chemical.svg', title: 'Chemical Resistant' },
-    { icon: 'src/assets/droplet.svg', title: 'Super Hydrophobic' },
-    { icon: 'src/assets/shield.svg', title: 'Scratch Resistant (9H Hardness)' }
+    { icon: sparkles, title: 'Super High Gloss Finish' },
+    { icon: sun, title: 'Fade Resistant' },
+    { icon: chemical, title: 'Chemical Resistant' },
+    { icon: chemical, title: 'Chemical Resistant' },
+    { icon: droplet, title: 'Super Hydrophobic' },
+    { icon: shield, title: 'Scratch Resistant (9H Hardness)' }
   ];
 
   return (
