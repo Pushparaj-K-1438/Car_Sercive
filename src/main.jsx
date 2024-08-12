@@ -11,7 +11,7 @@ AOS.init({ duration: 1000 });
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
-      <App />
+      <App1 />
     </Router>
   </React.StrictMode>
 );
